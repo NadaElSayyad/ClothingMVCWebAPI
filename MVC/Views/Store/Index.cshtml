@@ -1,0 +1,99 @@
+﻿@model IEnumerable<MVC.Models.StoreModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Code)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameArb)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NameEng)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNum)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MainStore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CompanyID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddedUserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AddedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdatedUserID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastUpdatedDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Code)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameArb)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameEng)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNum)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MainStore)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CompanyID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddedUserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AddedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastUpdatedUserID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastUpdatedDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsActive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
